@@ -51,7 +51,8 @@ while True:
         bottom = int(detection.Bottom)
         left   = int(detection.Left)
         right  = int(detection.Right)
-        cv2.putText(frame,item,(left,top-5),font,1,(0,0,255),2)
+        cv2.rectangle(frame,(left,top),(right,bottom),(0,255,0),1)
+        cv2.putText(frame,item,(left,top+20),font,1,(0,0,255),2)
     dt = time.time() - timeStamp
     timeStamp=time.time()
     fps = 1/dt
